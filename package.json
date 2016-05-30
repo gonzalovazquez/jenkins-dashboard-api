@@ -1,0 +1,16 @@
+{
+  "name": "build-health-dashboard",
+  "version": "1.0.0",
+  "description": "A web-app that fetches information of builds",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "hapi": "^13.4.1",
+    "jenkins-api": "^0.2.8"
+  }
+}

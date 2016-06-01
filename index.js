@@ -9,13 +9,11 @@ app.set('port', (process.env.PORT || 5000));
 var jenkins = jenkinsapi.init("https://ci.jenkins.io/");
 
 // Initialized 
-app.get('/', function(req, res) {
-  res.status(200).send('Connected');
-});
+app.use('/', express.static('dist'));
 
 
 // GET all jobs
-app.get('/jobs', function(req, res) {
+app.get('/api/jobs', function(req, res) {
   jenkins.all_jobs(function(err, data) {
     if (err){ return console.log(err); }
     res.status(200).send(data);
@@ -24,7 +22,7 @@ app.get('/jobs', function(req, res) {
 
 
 // GET specific job
-app.get('/job/:id', function (req, res) {
+app.get('/api/job/:id', function (req, res) {
   var name = req.params.id;
   jenkins.job_info(name, function(err, data) {
     if (err){ 

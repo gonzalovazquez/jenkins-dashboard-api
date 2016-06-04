@@ -1,1 +1,0 @@
-{"version":3,"file":"job.js","sourceRoot":"","sources":["job.ts"],"names":[],"mappings":";AAAA;IAAA;IAIA,CAAC;IAAD,UAAC;AAAD,CAAC,AAJD,IAIC;AAJY,WAAG,MAIf,CAAA","sourcesContent":["export class Job {\n  name: string;\n  url: string;\n  color: string\n}"]}
